@@ -91,4 +91,5 @@ console.log(data.list.g1[1].end_time);
 console.log(data.list.g1[1].service.name);
 console.log(data.list.g1[1].title);
 console.log(data.list.g1[1].subtitle);
+console.log(data.list.g1[1].act);
 
