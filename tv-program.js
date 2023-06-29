@@ -80,19 +80,6 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
-console.log(data.list.g1[0].start_time);
-console.log(data.list.g1[0].end_time);
-console.log(data.list.g1[0].service.name);
-console.log(data.list.g1[0].title);
-console.log(data.list.g1[0].content);
-
-console.log(data.list.g1[1].start_time);
-console.log(data.list.g1[1].end_time);
-console.log(data.list.g1[1].service.name);
-console.log(data.list.g1[1].title);
-console.log(data.list.g1[1].subtitle);
-console.log(data.list.g1[1].act);
-
 let div = document.querySelector('div#result');
 let div0 = document.createElement('div');
 div0.textContent = '開始時刻: ' + data.list.g1[0].start_time;
