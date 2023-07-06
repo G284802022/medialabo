@@ -80,6 +80,31 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
+let search = document.querySelector('button#print');
+search.addEventListener('click', searchElement);
+
+function searchElement() {
+  let s1 = document.querySelector('select#service');
+  let idx1 = s1.selectedIndex;
+
+  let os1 = s1.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o1 = os1.item(idx1);       // os の idx 番目の要素
+
+  console.log('  service=' + o1.getAttribute('value'));  // id 属性を表示
+  console.log('  textContent='+o1.textContent);
+
+  let s2 = document.querySelector('select#genre');
+  let idx2 = s2.selectedIndex;
+
+  let os2 = s2.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o2 = os2.item(idx2);       // os の idx 番目の要素
+
+  console.log('  genre=' + o2.getAttribute('value'));  // id 属性を表示
+  console.log('  textContent='+o2.textContent);
+}
+
+
+
 let div = document.querySelector('div#result');
 let div0 = document.createElement('div');
 div0.textContent = '開始時刻: ' + data.list.g1[0].start_time;
