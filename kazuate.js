@@ -15,7 +15,6 @@ hantei1.addEventListener('click', hantei);
 function hantei() {
   let i = document.querySelector('input[name="yoso"]');
   let yoso = i.value;
-  Number('yoso');
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   kaisu = kaisu + 1;
 
@@ -25,7 +24,7 @@ function hantei() {
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
   let t = document.querySelector('p#result');
-  if (kaisu < 5 && syouri !== 1) {
+  if (kaisu < 4 && syouri !== 1) {
     let su = document.querySelector('span#kaisu');
     su.textContent = kaisu + "回目の予想:";
     let n = document.querySelector('span#answer');
