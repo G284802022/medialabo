@@ -80,13 +80,13 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
-let data_posi = document.querySelector('tbody#tv_p');
+let position = document.querySelector('tbody#tv_p');
 
-let search_r_posi = document.querySelector('p#search_result');
+let result = document.querySelector('p#search_result');
 
 
-let search_posi = document.querySelector('button#print');
-search_posi.addEventListener('click', search);
+let kensaku = document.querySelector('button#print');
+kensaku.addEventListener('click', search);
 
 
 
@@ -101,7 +101,7 @@ function search() {
 
 
   if(ser === "" || genre === ""){
-    search_r_posi.textContent = "チャンネルとジャンルを選択してください。";
+    result.textContent = "チャンネルとジャンルを選択してください。";
   }
   else{
     sendRequest();
@@ -150,7 +150,7 @@ function showResult(resp) {
 // 通信エラーが発生した時の処理
 function showError(err){
   console.log(err);
-  search_r_posi.textContent = "通信エラーが発生しました。";
+  result.textContent = "通信エラーが発生しました。";
 }
 
 // 通信の最後にいつも実行する処理
@@ -161,14 +161,14 @@ function finish(){
 
 function print_result(){
   i = 0;
-  let tr_posi = document.querySelectorAll('tbody#tv_p > tr');
+  let po = document.querySelectorAll('tbody#tv_p > tr');
 
-  for(let b_re of tr_posi){
-    b_re.remove();
+  for(let l of po){
+    l.remove();
   }
   
   if(redata.list === null){
-    search_r_posi.textContent = "該当する検索結果はありません。";
+    result.textContent = "該当する検索結果はありません。";
   }
   else{
     let newtr_data = [];
@@ -196,7 +196,7 @@ function print_result(){
       
         }
 
-        data_posi.insertAdjacentElement('beforeend', newtr_data[i]);
+        position.insertAdjacentElement('beforeend', newtr_data[i]);
         i++;
       
       }  
@@ -224,13 +224,13 @@ function print_result(){
           newtr_data[i].insertAdjacentElement('beforeend', newtd_data[i][j]);      
         }
       
-        data_posi.insertAdjacentElement('beforeend', newtr_data[i]);
+        position.insertAdjacentElement('beforeend', newtr_data[i]);
         i++;
       
       }
 
     }
-    search_r_posi.textContent = i + "件見つかりました。";
+    result.textContent = i + "件見つかりました。";
       
   }
 
