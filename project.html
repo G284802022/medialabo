@@ -7,29 +7,35 @@
     <script src="tv-program.js" defer></script>
   </head>
   <body>
-    <select name="service" id="service">
-      <option value="">チャンネルを選んでください</option>
-      <option value="g1">NHK総合1</option>
-      <option value="e1">Eテレ1</option>
+
+    <label for="service"></label>
+      <select name="service" id="service">
+        <option value="">チャンネルを選んでください</option>
+        <option value="g1">NHK総合1</option>
+        <option value="e1">Eテレ1</option>
   </select>
-  <select name="genre" id="genre">
-    <option value="">ジャンルを選んでください</option>
-    <option value="0000">ニュース・報道</option>
-    <option value="0100">スポーツ</option>
-    <option value="0205">情報・ワイドショー</option>
-    <option value="0300">ドラマ</option>
-    <option value="0409">音楽</option>
-    <option value="0502">バラエティ</option>
-    <option value="0600">映画</option>
-    <option value="0700">アニメ</option>
-    <option value="0800">ドキュメンタリー・教養</option>
-    <option value="0903">劇場・公演</option>
-    <option value="1000">趣味・教育</option>
-    <option value="1100">福祉</option>
+
+  <label for="genre"></label>
+    <select name="genre" id="genre">
+      <option value="">ジャンルを選んでください</option>
+      <option value="0000">ニュース・報道</option>
+      <option value="0100">スポーツ</option>
+      <option value="0205">情報・ワイドショー</option>
+      <option value="0300">ドラマ</option>
+      <option value="0409">音楽</option>
+      <option value="0502">バラエティ</option>
+      <option value="0600">映画</option>
+      <option value="0700">アニメ</option>
+      <option value="0800">ドキュメンタリー・教養</option>
+      <option value="0903">劇場・公演</option>
+      <option value="1000">趣味・教育</option>
+      <option value="1100">福祉</option>
   </select>
+
   <button id="print">検索</button>
   <p id="search_result">検索結果</p>
   <p></p>
+
   <table border="1">
     <thead>
       <tr>
@@ -42,9 +48,11 @@
         <th>出演者</th>
       </tr>
     </thead>
-    <!--<tbody id="tv_p">-->
-      <!--javascript-->
+
+    <tbody id="tv_p">
+      
     </tbody>
+    
   </table>
     <div id="result"></div>
   </body>
