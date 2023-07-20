@@ -84,10 +84,8 @@ let position = document.querySelector('tbody#tv_program');
 
 let result = document.querySelector('p#search_result');
 
-
 let kensaku = document.querySelector('button#print');
 kensaku.addEventListener('click', search);
-
 
 
 let ser, genre;
@@ -115,7 +113,7 @@ function search() {
 function sendRequest(){
 
     // URL を設定
-
+    
   let url='https://www.nishita-lab.org/web-contents/jsons/nhk/' + ser + '-' + genre + '-j.json';
 
     // 通信開始
