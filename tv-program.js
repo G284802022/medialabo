@@ -80,7 +80,7 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
-let position = document.querySelector('tbody#tv_p');
+let position = document.querySelector('tbody#tv_program');
 
 let result = document.querySelector('p#search_result');
 
@@ -161,7 +161,7 @@ function finish(){
 
 function print_result(){
   i = 0;
-  let po = document.querySelectorAll('tbody#tv_p > tr');
+  let po = document.querySelectorAll('tbody#tv_program > tr');
 
   for(let l of po){
     l.remove();
